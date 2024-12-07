@@ -7,16 +7,16 @@ import {CartContext} from './context'
 
 const Item = (props) => { 
 
-    const cart=useContext(CartContext)
+    const {item,setItem}=useContext(CartContext)
 
-    console.log(cart,'data')
+   
 
     return (
         <>
             <div className="item">
                 <h2>Item name:{props.name} </h2>
                 <h2>Item price : $ {props.price}</h2>
-                <button >
+                <button onClick={()=> setItem([...item,{name:props.name,price:props.price}])}>
                     Add to cart
                 </button>
             </div>
