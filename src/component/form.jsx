@@ -19,10 +19,11 @@ const Form = () => {
     })
     const handleSubmit=(e)=>{
         e.preventDefault()
+      
         // Prevents the form's default submit behavior
         console.log('submit function called')
         console.log(formdata)
-console.log(error)
+        console.log(error)
         
        
     }
@@ -138,7 +139,9 @@ console.log(error)
                     </div>
                     <span>{error.confirm}</span>
                     <div className="wrap">
-                        <button className="submit" >
+                        <button className="submit" 
+                        disabled={!(formdata.name.length && formdata.email.length && formdata.contact.length && formdata.password.length && formdata.confirm.length)}
+                        >
                             Submit
                         </button>
                     </div>
