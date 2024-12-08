@@ -17,7 +17,7 @@ const Form = () => {
         password:"",
         confirm:""
     })
-    const handleSubmit=(e)=>{
+    const handleSubmit= async (e)=>{
         e.preventDefault()
       
         // Prevents the form's default submit behavior
@@ -25,7 +25,33 @@ const Form = () => {
         console.log(formdata)
         console.log(error)
         
-       
+        // const data=new FormData
+        
+        // data.append("name",formdata.name)
+        // data.append("email",formdata.email)
+        // data.append("conatct",formdata.contact)
+        // data.append("password",formdata.password)
+        // data.append("confirm",formdata.confirm)
+        // console.log(data,'form data ')
+
+      const response=await fetch("http://localhost:8081/user",{
+        method:"POST",
+        headers: {
+            "Content-Type": "application/json",
+            'Accept': "application/json"
+        },
+
+        body:JSON.stringify({
+            name:formdata.name,
+            email:formdata.email,
+            contact:formdata.contact,
+            password:formdata.password,
+            confirm:formdata.confirm
+        })
+        })
+
+        const data=await response.json()
+       console.log(data,'import data ')
     }
 
     const inpValidation=(type)=>{
