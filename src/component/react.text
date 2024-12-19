@@ -398,3 +398,24 @@ Ans. Hooks are functions that let you use state and other React features in func
 Types of hooks: useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef, useImperativeHandle, useLayoutEffect, useDebugValue
 Custom hooks are used to extract and reuse logic from components, making code more modular and easier to maintain
 Custom hooks can be used to share logic between components, handle side effects, encapsulate complex state logic, and more
+
+
+
+Q60. Describe the benefits of using SSR (server side rendering)
+
+Ans. SSR improves SEO, performance, and initial load time of web applications.
+Improves SEO by serving fully rendered HTML to search engine crawlers
+Enhances performance by reducing time to first paint and time to interactive
+Faster initial load time for users, especially on slower network connections
+Better support for social media crawlers and web scrapers
+Enables content to be visible to users even if JavaScript is disabled
+
+
+
+Q90. How Asynchronous behaviour can be achieved in Js
+
+Ans. Asynchronous behavior in JavaScript can be achieved using callbacks, promises, and async/await.
+
+Callbacks: Functions passed as arguments to be executed once an asynchronous operation is completed.
+Promises: Objects representing the eventual completion or failure of an asynchronous operation.
+Async/Await: Syntactic sugar built on top of promises to write asynchronous code that looks synchronous.
