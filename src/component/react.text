@@ -1,0 +1,11 @@
+Q7. 4. How can we mimic lifecycle methods using useEffect in functional components?
+Ans. useEffect can mimic lifecycle methods by specifying dependencies and cleanup functions.
+useEffect can be used to mimic componentDidMount by specifying an empty dependency array.
+
+useEffect can be used to mimic componentDidUpdate by specifying a dependency array.
+
+useEffect can be used to mimic componentWillUnmount by returning a cleanup function.
+
+useEffect can be used to mimic shouldComponentUpdate by using memoization techniques.
+
+useEffect can be used to mimic componentDidCatch by using error boundaries.
