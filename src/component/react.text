@@ -1,5 +1,7 @@
 Q7. 4. How can we mimic lifecycle methods using useEffect in functional components?
+
 Ans. useEffect can mimic lifecycle methods by specifying dependencies and cleanup functions.
+
 useEffect can be used to mimic componentDidMount by specifying an empty dependency array.
 
 useEffect can be used to mimic componentDidUpdate by specifying a dependency array.
@@ -9,3 +11,390 @@ useEffect can be used to mimic componentWillUnmount by returning a cleanup funct
 useEffect can be used to mimic shouldComponentUpdate by using memoization techniques.
 
 useEffect can be used to mimic componentDidCatch by using error boundaries.
+
+
+
+
+Q12. what is the full form of jwt?
+
+Ans. JWT stands for JSON Web Token.
+
+JWT is an open standard for securely transmitting information between parties as a JSON object.
+
+It is commonly used for authentication and authorization purposes in web applications.
+
+JWT consists of three parts: header, payload, and signature.
+
+The header contains the algorithm used to sign the token.
+
+The payload contains the claims or statements about the user.
+
+The signature is used to verify the authenticity of the token.
+
+Example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+
+
+Q20. How to pause process for particular code response using javascript?
+
+Ans. You can pause a process in JavaScript using the setTimeout function.
+
+Use setTimeout function to delay the execution of a code block.
+
+Specify the time in milliseconds for the delay.
+
+Example: setTimeout(() => { console.log('Paused for 2 seconds'); }, 2000);
+
+
+
+Q23. Explain the order of specifity in CSS classes, elements, ids, etc
+
+Ans. Explanation of CSS specificity hierarchy
+
+Inline styles have the highest specificity
+
+IDs have higher specificity than classes and elements
+
+Multiple selectors with the same specificity are resolved by the order in which they appear in the stylesheet
+
+The universal selector (*) has the lowest specificity
+
+
+
+Q24. What is life cycle of reactjs, what is hooks, types of hooks
+
+Ans. ReactJS has a component life cycle that defines how a component behaves and updates. Hooks are functions that allow state and other React features to be used in functional components.
+
+ReactJS has three main phases in its component life cycle: Mounting, Updating, and Unmounting.
+
+Hooks are functions that allow state and other React features to be used in functional components. There are two types of hooks: State hooks and Effect hooks.
+
+State hooks allow functional components to have state, which was previously only possible in class components. Example: useState()
+
+Effect hooks allow functional components to perform side effects, such as fetching data or updating the DOM. Example: useEffect()
+
+
+
+Q28. Types of props and their how do they work?
+
+Ans. Props are inputs passed to React components. There are two types: ownProps and childrenProps.
+
+ownProps are passed directly to the component from its parent
+
+childrenProps are passed to the component through its children
+
+ownProps can be accessed using this.props in the component
+
+childrenProps can be accessed using this.props.children in the component
+
+
+
+Q32. What is Debouncing in JavaScript?
+
+Ans. Debouncing in JavaScript is a technique used to limit the number of times a function is called in a short period of time.
+
+Debouncing is used to improve performance and prevent unnecessary function calls.
+
+It delays the execution of a function until after a certain amount of time has passed since the last invocation.
+
+It is commonly used in scenarios like search bars, scroll events, and input validation.
+
+Debouncing can be implemented using setTimeout and clearTimeout functions.
+
+Example: Debouncing a search bar input to reduce API calls.
+
+
+
+Q34. What is lazy loading and how we can implement in our project.
+
+Ans. Lazy loading is a technique used to defer loading non-essential resources until they are needed.
+
+Lazy loading helps improve performance by only loading resources when they are required.
+
+In React, lazy loading can be implemented using React.lazy() and Suspense components.
+
+Example: const MyComponent = React.lazy(() => import('./MyComponent'));
+ 
+
+
+Q35. What is react routing and how it is different from other conventional routing methods.
+
+Ans. React routing is a way to handle navigation in a React application by defining routes and rendering components based on the URL.
+
+React routing allows for declarative routing, where routes are defined using JSX elements.
+
+It enables dynamic routing based on the URL, allowing for different components to be rendered based on the route.
+
+React Router is a popular library for handling routing in React applications.
+
+Unlike conventional routing methods, React routing is more efficient as it only updates the components that need to be re-rendered.
+
+React routing also allows for nested routing, where components can be nested within each other based on the route.
+
+
+Q36. What are react hoop can you name a few build in hoops and explain their purpose
+
+Ans. React hooks are functions that let you use state and other React features without writing a class.
+
+useState: allows functional components to have local state
+
+useEffect: performs side effects in function components
+
+useContext: allows you to subscribe to React context without introducing nesting
+
+useReducer: an alternative to useState for more complex state logic
+
+useMemo: memoizes the result of a function
+
+useRef: returns a mutable ref object whose .current property is initialized to the passed argument
+
+
+
+
+Q37. What is difference between useMemo and useCallback?
+
+Ans. useMemo is used to memoize a value, while useCallback is used to memoize a function.
+
+useMemo is used to memoize a computed value and recompute only when its dependencies change.
+
+useCallback is used to memoize a callback function and re-create it only when its dependencies change.
+
+useMemo is useful for optimizing performance by avoiding unnecessary re-computations.
+
+useCallback is useful for optimizing performance by avoiding unnecessary re-creations of callback functions.
+
+
+
+Q39. What is the difference between normal function and arrow function?
+
+Ans. Arrow functions are more concise and have lexical scoping, while normal functions have their own 'this' value.
+
+Arrow functions do not have their own 'this' value, they inherit it from the parent scope.
+
+Arrow functions are more concise and have implicit return.
+
+Normal functions are more flexible and can be used as constructors.
+
+Arrow functions cannot be used as constructors.
+
+Arrow functions do not have 'arguments' object.
+
+
+
+
+Q40. Is it advisable to use indexes as keys? If not, why?
+
+Ans. No, it is not advisable to use indexes as keys in React components.
+
+Using indexes as keys can lead to performance issues and incorrect behavior when reordering or deleting items in a list.
+
+It is recommended to use unique IDs as keys to ensure proper component rendering and reconciliation.
+
+Example:
+
+{items.map((item, index) =>
+{item}
+)}
+
+
+
+
+Q41. what is callback, event deligaton, react reconcillaton, react life cycle 
+
+Ans. Callbacks, event delegation, React reconciliation, and React lifecycle methods are key concepts in React development.
+
+Callback functions are functions passed as arguments to be executed later, commonly used in event handling and asynchronous operations.
+
+Event delegation is a technique where a single event listener is attached to a parent element to manage events for multiple child elements.
+
+React reconciliation is the process of updating the DOM to match the virtual DOM representation of a React component.
+
+React lifecycle methods are special methods that are automatically called at specific points in a component's life cycle, such as componentDidMount and componentDidUpdate.
+
+
+
+
+Q41. what is callback, event deligaton, react reconcillaton, react life cycle methods
+
+Ans. Callbacks, event delegation, React reconciliation, and React lifecycle methods are key concepts in React development.
+
+Callback functions are functions passed as arguments to be executed later, commonly used in event handling and asynchronous operations.
+
+Event delegation is a technique where a single event listener is attached to a parent element to manage events for multiple child elements.
+
+React reconciliation is the process of updating the DOM to match the virtual DOM representation of a React component.
+
+React lifecycle methods are special methods that are automatically called at specific points in a component's life cycle, such as componentDidMount and componentDidUpdate.
+
+
+
+
+Q42. Can you describe some Architectural Patterns ?
+
+Ans. Architectural patterns are reusable solutions to common problems in software architecture.
+
+MVC (Model-View-Controller) - Separates an application into three main components: the model, the view, and the controller.
+
+MVVM (Model-View-ViewModel) - Similar to MVC but with a ViewModel layer that manages the state and behavior of the view.
+
+Flux - Unidirectional data flow pattern commonly used with React applications.
+
+Microservices - Architectural style that structures an application as a collection of loosely coupled services.
+
+Layered Architecture - Organizes an application into layers such as presentation, business logic, and data access.
+
+Event-Driven Architecture - Components communicate through events, allowing for loose coupling and scalability.
+
+
+Q43. Do you configured some part of a CI/CD pipeline?
+
+Ans. Yes, I have configured various parts of CI/CD pipelines.
+
+I have set up automated builds using tools like Jenkins or GitLab CI.
+
+I have configured automated testing processes within the pipeline.
+
+I have integrated deployment scripts to automatically deploy code to different environments.
+
+I have set up notifications for build status and deployment success/failure.
+
+I have worked on optimizing and improving the efficiency of CI/CD pipelines.
+
+
+
+
+Q44. Difference between React.memo vs use memo vs useCallback
+
+Ans. Difference between React.memo vs use memo vs useCallback
+
+React.memo is a higher-order component that memoizes a functional component
+
+useMemo is a hook that memoizes a value
+
+useCallback is a hook that memoizes a function
+
+React.memo and useMemo are used for performance optimization
+
+useCallback is used to prevent unnecessary re-renders
+
+
+
+
+
+Q45. For loop, event listener in react,what is usesState , what is use effect ,hooks in react
+
+Ans. useState and useEffect are hooks in React used for managing state and side effects respectively.
+
+useState is a hook used to add state to functional components in React
+
+useEffect is a hook used to perform side effects in functional components
+
+Hooks in React allow functional components to have state and lifecycle methods similar to class components
+
+
+
+Q46. How does Server-Side Rendering work?
+
+Ans. Server-Side Rendering (SSR) is the process of rendering web pages on the server and sending the HTML to the client.
+
+SSR improves website performance and SEO by reducing load times and providing search engines with fully rendered pages.
+
+React provides a library called ReactDOMServer that allows developers to render React components on the server.
+
+SSR requires a server-side framework or library, such as Next.js or Gatsby, to handle the rendering and routing of pages.
+
+SSR can be combined with client-side rendering (CSR) to create a hybrid approach that provides the benefits of both methods.
+
+
+
+
+Q47. What is dom ? How we can change Html tag using javascript and dom
+
+Ans. DOM stands for Document Object Model. It is a programming interface for HTML and XML documents.
+
+DOM represents the structure of a document as a tree of objects.
+
+We can use JavaScript to access and manipulate the DOM to change HTML tags.
+
+We can use DOM methods like getElementById, getElementsByClassName, etc. to select HTML elements.
+
+We can then modify the selected elements by changing their properties or attributes using JavaScript.
+
+For example, to change the text of a paragraph element with id 'myParagraph', we can use: document.getElementById('myParagraph').textContent = 'New text';
+
+
+
+
+Q48. How Netflix video loading works it was of system design
+
+Ans. Netflix uses a content delivery network (CDN) to efficiently load videos based on user location and network conditions.
+
+Netflix uses a distributed network of servers to store and deliver video content closer to users for faster loading times.
+
+Content is cached on servers located in various regions to reduce latency and improve streaming quality.
+
+Netflix employs adaptive bitrate streaming to adjust video quality based on available bandwidth, ensuring smooth playback even on slower connections.
+
+
+
+
+
+Q49. What is Redux ? How we are using it in real time
+
+Ans. Redux is a predictable state container for JavaScript apps.
+
+Redux is a state management library for JavaScript applications.
+
+It helps in managing the state of the application in a predictable way.
+
+Redux stores the entire state of the application in a single immutable object.
+
+Actions are dispatched to update the state, and reducers specify how the state changes in response to actions.
+
+Redux is commonly used with React to manage the state of complex applications.
+
+Example: In a shopping cart application, Redux can be used to manage the items in the cart and update the total price.
+
+
+
+
+
+Q52. How is 'this' handled in arrow functions?
+
+Ans. In arrow functions, 'this' is lexically scoped and does not have its own value.
+
+Arrow functions do not have their own 'this' value, they inherit 'this' from the enclosing lexical context.
+
+Arrow functions are useful when you want to preserve the value of 'this' from the surrounding code.
+
+Regular functions have their own 'this' value, which can change depending on how the function is called.
+
+
+
+
+
+Q53. How will you optimize your web application?
+
+Ans. Optimizing a web application involves improving performance, speed, and user experience.
+
+Minify and compress CSS, JavaScript, and images to reduce load times
+
+Implement lazy loading for images and content to improve initial load time
+
+Use server-side rendering to improve SEO and initial load performance
+
+Optimize database queries and use caching to reduce server load
+
+Implement code splitting to only load necessary code for each page
+
+Use a content delivery network (CDN) to cache static assets and improve load times
+
+
+
+
+
+Q54. Types of hooks and when and why to use custom hooks
+Ans. Hooks are functions that let you use state and other React features in functional components. Custom hooks are reusable logic functions created by developers.
+Types of hooks: useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef, useImperativeHandle, useLayoutEffect, useDebugValue
+Custom hooks are used to extract and reuse logic from components, making code more modular and easier to maintain
+Custom hooks can be used to share logic between components, handle side effects, encapsulate complex state logic, and more
